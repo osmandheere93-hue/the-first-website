@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Anybody", sans-serif;
+    background-color: rgb(220, 220, 220);
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background-color: rgb(245, 245, 245);
+    height: 4.5rem;
+    position: sticky;
+    width: 100%;
+    top: 0;
+
+}
+
+.con{
+    width: min(90%, 1120px);
+    margin-inline: auto;
+}
+
+img{
+    width: 100%;
+}
+
+/* ================= DESKTOP ================= */
+
+.desk{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links li{
+    list-style: none;
+}
+
+.links li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(95, 106, 212);
+}
+
+.links li a:hover{
+    color: #2e43ff;
+}
+
+.desk h1{
+    font-size: 1.56rem;
+    font-weight: 700;
+}
+
+/* ================= HAMBURGER ================= */
+
+.humbiger{
+    display: none;
+}
+
+.humbiger i[data-visible="true"]{
+    display: block;
+}
+
+.humbiger i[data-visible="false"]{
+    display: none;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.menu{
+    display: none;
+}
+
+/* Buttons */
+
+.ac{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.primary,
+.secondary{
+    display: inline-block;
+    background-color: #2e43ff;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    height: calc(100vh - 4.5rem);
+
+    background:
+        linear-gradient(
+            rgba(161, 255, 29, 0.3),
+            rgba(251, 15, 0, 0.3)
+        ),
+        url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1274&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+        center / cover no-repeat;
+}
+
+.hero .container{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.hero .container h1{
+    text-align: center;
+}
+
+.bn{
+    margin-top: 20px;
+    background-color: #2e43ff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+    .yoga{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1785270101111-4de7e302db8d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat;
+        height: 90vh;
+        border-radius: 25px;
+        margin-top: 6rem;
+        display: flex;
+        align-items: flex-end;
+        
+    }
+   
+    .page2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        max-width: 728px;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .page2 h1{
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    .page2 p{
+        font-size: 1.3rem;
+    }
+
+    .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+         gap: 1rem;
+         margin-block: 6rem;
+    }
+
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+       gap: 1rem;
+       
+    }
+
+    .boxes img{
+        border-radius: 8px;
+    }
+
+    .boxes h1{
+        font-size: 1.56rem;
+    }
+
+    .boxes p{
+        font-size: 1.25rem;
+    }
+
+
+    footer{
+        background-color: #2b2b2b;
+        color: white;
+        padding: 1.5rem;
+        font-size: 2.5rem;
+        text-align: center;
+        
+    }
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+    /* Desktop menu qari */
+    .desk{
+        display: none;
+    }
+
+    header{
+        height: 0;
+    }
+
+    /* Hamburger button */
+    .humbiger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        z-index: 1000;
+
+        background-color: #2b2b2b;
+        color: white;
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 2rem;
+        border-radius: 50%;
+
+        top: 20px;
+        right: 5%;
+
+        cursor: pointer;
+    }
+
+    /* Mobile Menu */
+    .menu{
+        display: flex;
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 999;
+
+        background-color: #2b2b2b;
+
+        align-items: center;
+        justify-content: center;
+
+        transform: translateX(0);
+        transition: transform 0.2s ease-in;
+    }
+
+    /* Menu qari */
+    .menu[data-visible="false"]{
+        transform: translateX(100%);
+    }
+
+    /* Menu content */
+    .menu .na{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        width: 80%;
+    }
+
+    .menu .na h1{
+        color: white;
+        text-align: center;
+    }
+
+    /* Links */
+    .menu .na .links{
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 2.5rem;
+    }
+
+    .menu .na .links li a{
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+    }
+
+    .page2{
+        margin-bottom: 2rem;
+    }
+
+    /* Hero mobile */
+    .hero{
+        height: 100vh;
+    }
+
+    .hero .container h1{
+        font-size: 1.8rem;
+        padding-inline: 20px;
+    }
+}
